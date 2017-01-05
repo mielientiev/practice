@@ -17,7 +17,7 @@ object EitherTask {
       case Right(value) => f(value)
     }
 
-    def orElse[EE >: E,B >: A](b: => Either[EE, B]): Either[EE, B] = {
+    def orElse[EE >: E,B >: A](b: => Either[EE, B]): Either[EE, B] = this match {
       case Left(_) => b
       case r@Right(_) => r
     }
