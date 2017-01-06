@@ -2,6 +2,13 @@ package chapter4
 
 object OptionTask {
 
+  def main(args: Array[String]): Unit = {
+    val l = List(Some(111), None, Some(222), Some(333))
+    println(Option.sequence(l))
+    println(Option.sequence2(l))
+    println(Option.sequenceViaFold(l))
+  }
+
   /**
     * EXERCISE 1:
     * We'll explore when you'd use each of these next. But first, as an exercise, implement all of the above functions on Option.
@@ -71,6 +78,10 @@ object OptionTask {
         case x :: xs =>
           map2(x, sequence(xs))(_ :: _)
       }
+    }
+
+    def sequenceViaFold[A](a: List[Option[A]]): Option[List[A]] = {
+      a.foldRight[Option[List[A]]](Some(List.empty[A]))((el, acc) => map2(el, acc)(_ :: _))
     }
 
     /**
