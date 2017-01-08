@@ -54,7 +54,8 @@ object RandomTask {
 
 
     /**
-      * EXERCISE 3: Write functions to generate an (Int, Double) pair, a (Double, Int) pair, and a (Double, Double, Double)
+      * EXERCISE 3:
+      * Write functions to generate an (Int, Double) pair, a (Double, Int) pair, and a (Double, Double, Double)
       * 3-tuple. You should be able to reuse the functions you've already written.
       */
 
@@ -118,7 +119,8 @@ object RandomTask {
 
 
     /**
-      * EXERCISE 7: Unfortunately, map is not powerful enough to implement intDouble and doubleInt from before.
+      * EXERCISE 7:
+      * Unfortunately, map is not powerful enough to implement intDouble and doubleInt from before.
       * What we need is a new combinator map2, that can combine two RNG actions into one using a binary rather than unary function.
       * Write its implementation and then use it to reimplement the intDouble and doubleInt functions.
       */
